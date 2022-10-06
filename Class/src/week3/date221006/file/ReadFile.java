@@ -1,6 +1,7 @@
 package week3.date221006.file;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -9,6 +10,15 @@ public class ReadFile {
 
     public ReadFile(String filename) {
         this.filename = filename;
+    }
+
+    void fileList(){
+        File dir = new File("./");
+        File files[] = dir.listFiles();
+
+        for (File file : files) {
+            System.out.println(file);
+        }
     }
 
     public BufferedReader getBufferedReader(String filename) throws IOException {
@@ -26,6 +36,7 @@ public class ReadFile {
 
     public static void main(String[] args) throws IOException {
         ReadFile readFile = new ReadFile("a_file.txt");
+        readFile.fileList();
 
         // 1글자 읽기
         readFile.readNbytes(1);
