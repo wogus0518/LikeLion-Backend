@@ -37,6 +37,16 @@ public class ReadFile {
     public static void main(String[] args) throws IOException {
         ReadFile readFile = new ReadFile("a_file.txt");
         readFile.fileList();
+        /**
+         * .\.git
+         * .\.gitignore
+         * .\.idea
+         * .\Algorithm
+         * .\a_file.txt
+         * .\Class
+         * .\out
+         * .\README.md
+         */
 
         // 1글자 읽기
         readFile.readNbytes(1);
