@@ -26,13 +26,13 @@ public class ReadFile {
         return br;
     }
 
-    public void readNbytes(int num) throws IOException {
-        BufferedReader br = getBufferedReader(this.filename);
-        for (int i = 0; i < num; i++) {
-            System.out.print((char) br.read());
-        }
-        System.out.println();
-    }
+//    public void readNbytes(int num) throws IOException {
+//        BufferedReader br = getBufferedReader(this.filename);
+//        for (int i = 0; i < num; i++) {
+//            System.out.print((char) br.read());
+//        }
+//        System.out.println();
+//    }
 
     public static void main(String[] args) throws IOException {
         ReadFile readFile = new ReadFile("a_file.txt");
@@ -49,9 +49,9 @@ public class ReadFile {
          */
 
         // 1글자 읽기
-        readFile.readNbytes(1);
-
-        // 2글자 읽기
-        readFile.readNbytes(2);
+//        readFile.readNbytes(1);
+//
+//        // 2글자 읽기
+//        readFile.readNbytes(2);
     }
 }
