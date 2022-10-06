@@ -9,7 +9,7 @@ public class AlphabetMap {
 
         for (int i = 0; i < address.length(); i++) {
             char c = address.charAt(i);
-            if (97 <= c && c <= 122) {
+            if (isAlphabet(c)) {
                 try {
                     Integer num = map.get(c + "");
                     map.put(c+"", num + 1);
@@ -20,5 +20,9 @@ public class AlphabetMap {
         }
 
         System.out.println(map.toString());
+    }
+
+    private static boolean isAlphabet(char c1) {
+        return 97 <= c1 && c1 <= 122;
     }
 }
