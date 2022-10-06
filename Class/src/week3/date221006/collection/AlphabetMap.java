@@ -41,6 +41,4 @@ public class AlphabetMap {
 
         System.out.println(result.toString());
     }
-
-
 }
