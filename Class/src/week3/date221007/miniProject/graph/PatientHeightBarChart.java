@@ -27,7 +27,7 @@ import java.util.List;
 public class PatientHeightBarChart implements ExampleChart<CategoryChart> {
 
     public static void main(String[] args) throws IOException {
-        final String filename = "patient_height_statistics.txt";
+        final String filename = "resources/patient_height_statistics.txt";
         ReadLineContext<HeightInfo> readLineContext = new ReadLineContext<>(new PatientHeightParser());
         List<HeightInfo> heightInfos = readLineContext.readByLine(filename);
         List<Integer> xAxis = new ArrayList<>();
