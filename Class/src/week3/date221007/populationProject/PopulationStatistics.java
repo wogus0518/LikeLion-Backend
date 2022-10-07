@@ -4,8 +4,7 @@ import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class PopulationStatistics {
 
@@ -36,8 +35,7 @@ public class PopulationStatistics {
 
     public List<PopulationMove> readByLine(String fileName) throws IOException {
         List<PopulationMove> pml = new ArrayList<>();
-        FileReader fileReader = new FileReader(new File(fileName));
-        BufferedReader bufferedReader = new BufferedReader(fileReader);
+        BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName));
 
         String line = "";
         while ((line = bufferedReader.readLine()) != null) {
@@ -88,20 +86,45 @@ public class PopulationStatistics {
     }
 
     public String fromToString(PopulationMove populationMove) {
-        return populationMove.getFromSido() + "," + populationMove.getToSido() + "\n";
+        return populationMove.getFromSido() + "," + populationMove.getToSido();
     }
 
+    public Map<String, Integer> getMoveCntMap(List<PopulationMove> populationMoveList) {
+        HashMap<String, Integer> moveCntMap = new HashMap<>();
+        for (PopulationMove pm : populationMoveList) {
+            String key = fromToString(pm);
+            if (moveCntMap.get(key) == null) {
+                moveCntMap.put(key, 1);
+            }
+            moveCntMap.put(key, moveCntMap.get(key) + 1);
+        }
+        return moveCntMap;
+    }
     public static void main(String[] args) throws IOException {
+//        String filename = "population_data_2021.csv";
+//        PopulationStatistics populationStatistics = new PopulationStatistics();
+//        List<PopulationMove> pml = populationStatistics.readByLine(filename);
+//
+//        ArrayList<String> strings = new ArrayList<>();
+//        for (PopulationMove pm : pml) {
+//            String fromTo = populationStatistics.fromToString(pm) + "\n";
+//            strings.add(fromTo);
+//        }
+//
+//        populationStatistics.write(strings, "from_to.txt");
+
         String filename = "from_to.txt";
         PopulationStatistics populationStatistics = new PopulationStatistics();
         List<PopulationMove> pml = populationStatistics.readByLine(filename);
 
-        ArrayList<String> strings = new ArrayList<>();
-        for (PopulationMove pm : pml) {
-            System.out.printf("전입:%s, 전출:%s\n", pm.getFromSido(), pm.getToSido());
-//            String fromTo = populationStatistics.fromToString(pm);
-//            strings.add(fromTo);
+        Map<String, Integer> moveCntMap = populationStatistics.getMoveCntMap(pml);
+        String targetFilename = "each_sido_cnt.txt";
+        populationStatistics.createFile(targetFilename);
+        List<String> cntResult = new ArrayList<>();
+        for (String key : moveCntMap.keySet()) {
+            String s = String.format("key:%s    value:%d\n", key, moveCntMap.get(key));
+            cntResult.add(s);
         }
-        populationStatistics.write(strings, "./from_to.txt");
+        populationStatistics.write(cntResult, targetFilename);
     }
 }
