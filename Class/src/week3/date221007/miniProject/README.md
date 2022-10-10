@@ -3,10 +3,12 @@
 ### 환자 키 분포 시각화하기
 Java의 파일 입출력을 이해하고 환자 데이터를 읽어 환자의 키 분포를 시각화 할 수
 있도록 데이터를 전처리하고 외부 라이브러리 XChart를 이용해 시각화 한다.
-![img.png](C:\Users\wogus\IdeaProjects\like-lion\resources\images\patientHeight.png)
+![img.png](resources\images\patientHeight.png)
 
 
 ### 서울에서 전출 간 지역 비율 시각화하기
 500MB 통계 데이터를 읽은 후 시각화에 필요한 데이터로 전처리를 하고
 XChart 라이브러리를 이용하여 파이형 차트를 그려 비율을 쉽게 알아볼 수 있게 한다.
-![img.png](C:\Users\wogus\IdeaProjects\like-lion\resources\images\sidoPiechart.png)
+<img src="https://github.com/wogus0518/LikeLion-Backend/blob/1c9e916060713a86e30b873cc81e0effe19f951f/resources/images/sidoPiechart.png">
+
+![XChart Github](https://github.com/knowm/XChart/blob/develop/xchart-demo/src/main/java/org/knowm/xchart/demo/charts/bar/BarChart01.java)
