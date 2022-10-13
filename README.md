@@ -20,7 +20,7 @@
    2. 대한민국 전출입 공공데이터를 이용해 서울에서 전출간 지역 비율 시각화
 ### 프로젝트 결과물
 #### 1. 환자 키 분포 시각화 👉 [레포지토리 이동](https://github.com/wogus0518/LikeLion-Backend/tree/main/Class/src/week3/date221007/miniProject)
-<div align="center"><img src="resources/images/patientHeight.png" width="400" height="200"></div>
+<div align="center"><img src="resources/img/patientHeight.png" width="400" height="200"></div>
 
 #### 2. 서울 전출입 비율 시각화 👉 [레포지토리 이동](https://github.com/wogus0518/LikeLion-Backend/tree/main/Class/src/week3/date221007/miniProject)
-<div align="center"><img src="resources/images/sidoPiechart.png" width="300" height="300"></div>
+<div align="center"><img src="resources/img/sidoPiechart.png" width="300" height="300"></div>
