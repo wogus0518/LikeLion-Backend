@@ -5,4 +5,5 @@ Class/.idea/
 Class/Class.iml
 
 /buildpath/
-/resources/
+/resources/data/
+/.idea/
