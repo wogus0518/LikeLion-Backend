@@ -11,6 +11,5 @@ public class StampMain {
         Stamper pyramidStamper = new PyramidStamper('$', 4);
         pyramidStamper.stamp();
 
-
     }
 }
