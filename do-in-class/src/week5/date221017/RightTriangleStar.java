@@ -1,4 +1,4 @@
-package week5;
+package week5.date221017;
 
 public class RightTriangleStar {
     public void stamp(int length) {
