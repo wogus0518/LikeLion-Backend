@@ -24,3 +24,6 @@
 
 #### 2. 서울 전출입 비율 시각화 👉 [레포지토리 이동](https://github.com/wogus0518/LikeLion-Backend/tree/main/Class/src/week3/date221007/miniProject)
 <div align="center"><img src="resources/img/sidoPiechart.png" width="300" height="300"></div>
+
+#### 3. 공공데이터에서 필요한 정보만을 추출한 후 .sql 파일 생성 👉 [레포지토리 이동](https://github.com/wogus0518/like-lion/tree/main/src/main/java/codelion/projects/hospitalProject)
+<div align="center"><img src="resources/img/hospitalSql.png" width="300" height="300"></div>
